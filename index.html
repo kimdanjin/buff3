@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-795SY2E8E3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-795SY2E8E3');
+</script>
+	<meta charset="UTF-8">
+	<title>메이플랜드 홀심 알리미</title>
+	<script src="https://docs.opencv.org/4.8.0/opencv.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h2>메이플랜드 홀심 알리미</h2>
+	<p><span id="explanation">---------------------------------------------------------------------------</span></p>
+
+	<p><span id="explanation">사용방법</span></p>
+	<p><span id="explanation">1.템플릿 이미지 해상도 및 알림시간 선택</span></p>
+	<p><span id="explanation">2.화면공유 클릭 "MapleStory Worlds" 선택 공유</span></p>
+	<p><span id="explanation">3.실행 여부 🟢 화면 공유 중 및 버프창이 보이면 동작확인 </span></p>
+	<p><span id="explanation">🔴주의사항🔴<br>메이플랜드 해상도 변경 후 창 크기를 변경해서는 안됩니다.<br> FHD모니터는 1920 안됩니다. 현재 사용중인 해상도가 안맞는 경우 다른해상도 변경 후 사용할 해상도로 변경</span></p>
+	<p><span id="explanation">위 설명으로도 어렵거나 동작되지 않는분은 메이플랜드<br>"김비건" 귓 또는 우편 또는 아래의 주소로 문의 주세요.</span></p>
+	<p><span id="explanation">2025-07-24 업데이트 이후 채널변경 하면 해상도 변경되는 이슈가 있어서 채널변경되면 꼭 해상도를 다른 해상도로 변경했다가 사용하실 해상도로 재설정 하셔야합니다.</span></p>
+	<p><span id="explanation"><a href="https://open.kakao.com/o/guSNpDDh" target="_blank">홀심 알림 문의</a></span></p>
+	
+	<p><span id="explanation"><a href="https://open.kakao.com/o/s4UYDmIh" target="_blank">본메코디 제작문의(메랜메소 가능)</a></span></p>
+
+
+	<p><span id="explanation">---------------------------------------------------------------------------</span></p>
+
+
+
+	<button id="selectTemplateBtn">템플릿 이미지 선택</button> 
+	<div id="templateGrid" style="display: none;">
+		<p class="info"> 1280x800, 1280x720 해상도 </p>
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1280/15.png" data-template-name="홀심15초" data-rolw="450" data-rolh="50"  data-roly="122" alt="홀심15초" />
+			<p class="imgalt">15초</p>
+		</div>
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1280/20.png" data-template-name="홀심20초" data-rolw="450" data-rolh="50"  data-roly="122" alt="홀심20초" />
+			<p class="imgalt">20초</p>
+		</div>
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1280/30.png" data-template-name="홀심30초" data-rolw="450" data-rolh="50"  data-roly="122" alt="홀심30초" />
+			<p class="imgalt">30초</p>
+		</div>
+
+
+		<p class="info"> 1600x1024, 1600x900 해상도 </p>
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1600/7.png" data-template-name="홀심7초" data-rolw="600" data-rolh="60"  data-roly="145" alt="홀심7초" />
+			<p class="imgalt">7초</p>
+		</div>
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1600/10.png" data-template-name="홀심10초" data-rolw="600" data-rolh="60"  data-roly="145" alt="홀심10초" />
+			<p class="imgalt">10초</p>
+		</div>
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1600/15.png" data-template-name="홀심15초" data-rolw="600" data-rolh="60"  data-roly="145" alt="홀심15초" />
+			<p class="imgalt">15초</p>
+		</div>
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1600/20.png" data-template-name="홀심20초" data-rolw="600" data-rolh="60"  data-roly="145"  alt="홀심20초" />
+			<p class="imgalt">20초</p>
+		</div>
+		
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1600/25.png" data-template-name="홀심25초" data-rolw="600" data-rolh="60"  data-roly="145"  alt="홀심25초" />
+			<p class="imgalt">25초</p>
+		</div>
+		
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1600/30.png" data-template-name="홀심30초" data-rolw="600" data-rolh="60"  data-roly="145" alt="홀심30초" />
+			<p class="imgalt">30초</p>
+		</div>
+
+
+		<p class="info"> 1920x1200, 1920x1080 해상도 </p>
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1920/15.png" data-template-name="홀심15초" data-rolw="700" data-rolh="73"  data-roly="165" alt="홀심15초" />
+			<p class="imgalt">15초</p>
+		</div>
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1920/20.png" data-template-name="홀심20초" data-rolw="700" data-rolh="73"  data-roly="165" alt="홀심20초" />
+			<p class="imgalt">20초</p>
+		</div>
+		
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1920/25.png" data-template-name="홀심25초" data-rolw="700" data-rolh="73"  data-roly="165" alt="홀심25초" />
+			<p class="imgalt">25초</p>
+		</div>
+		
+		<div class="template-item">
+			<img class="template-thumbnail" src="./img/1920/30.png" data-template-name="홀심30초" data-rolw="700" data-rolh="73"  data-roly="165" alt="홀심30초" />
+			<p class="imgalt">30초</p>
+		</div>
+	</div>
+	<button id="startBtn">화면공유</button>
+	
+    <p>	설정된 알림 : 	<span id="currentTemplateName">없음</span> </p>
+	<p>	실행 여부 : <span id="status">🔴 동작 대기중</span></p>
+	
+
+    <div class="roiset">
+        <h3>탐지 설정</h3>
+        <label for="roiWidthInput">ROI 너비:</label>
+        <input type="number" id="roiWidthInput" value="450"><br>
+        <label for="roiHeightInput">ROI 높이:</label>
+        <input type="number" id="roiHeightInput" value="50"><br>
+        <label for="roiYInput">ROI Y좌표:</label>
+        <input type="number" id="roiYInput" value="120"><br>
+    </div>
+
+    <div>
+
+        <label for="matchThresholdInput">매칭 임계값:</label>
+        <input type="number" id="matchThresholdInput" step="0.001" value="0.978">
+    </div>
+
+	<video id="video" autoplay playsinline></video>
+	<canvas id="canvas"></canvas>
+
+	<audio id="alertSound" src="alert.mp3" preload="auto"></audio>
+
+	<script src="buff.js"></script>
+</body>
+</html>
+
+
+
+
